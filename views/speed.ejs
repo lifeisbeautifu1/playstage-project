@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css"
+      integrity="sha512-T584yQ/tdRR5QwOpfvDfVQUidzfgc2339Lc8uBDtcp/wYu80d7jwBgAxbyMh0a9YM9F8N3tdErpFI8iaGx6x5g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/public/css/speed.css" />
+    <title>Speed Typing Game</title>
+  </head>
+  <body>
+    
+    <div class="container text-center">
+      <h1 class="my-5">Speed Typing Game</h1>
+      <div class="row">
+        <div class="col-md-4">
+          <h3 class="text-primary card p-2">
+            Speed(WPM): <span class="wpm"></span>
+          </h3>
+        </div>
+        <div class="col-md-4">
+          <h3 class="text-primary card p-2">
+            Correct: <span class="correct"></span>
+          </h3>
+        </div>
+        <div class="col-md-4">
+          <h3 class="text-primary card p-2">
+            Time left: <span class="time"></span>
+          </h3>
+        </div>
+      </div>
+
+      <div class="card p-4 mt-5">
+        <p class="text lead font-weight-bold"></p>
+      </div>
+      <div class="form-group mt-5">
+        <input
+          type="text"
+          name="input"
+          autofocus
+          class="form-control"
+          id="input"
+          autocomplete="off"
+        />
+      </div>
+      <div>
+        <a href="#" class="btn btn-primary new-game">New game</a>
+      </div>
+    </div>
+    <script src="/public/js/speed.js"></script>
+    <script src="/public/js/timespend.js"></script>
+  </body>
+</html>

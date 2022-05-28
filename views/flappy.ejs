@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Flappy Bird</title>
+    <link rel="stylesheet" href="/public/css/flappy.css" />
+  </head>
+
+  <body>
+    
+
+    <canvas id="canvas" width="400" height="612"></canvas>
+
+    <div id="my-modal" class="modal">
+      <div class="modal-content">
+        <h2>Game Over</h2>
+
+        <h2 id="text"></h2>
+
+        <div>
+          <a href="/dashboard" class="button mr">Back to Dashboard</a>
+
+          <a href="#" id="modal-btn" class="button">Play again</a>
+        </div>
+      </div>
+    </div>
+
+    <script src="/public/js/flappy.js"></script>
+    <script src="/public/js/timespend.js"></script>
+  </body>
+</html>

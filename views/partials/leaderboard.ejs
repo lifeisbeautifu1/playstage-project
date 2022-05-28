@@ -1,0 +1,344 @@
+<% players.sort((a, b) => b.wordle.bestStreak - a.wordle.bestStreak );%> <% let
+index = players.findIndex((player) => player.name === user.name) + 1; %> <%
+let size = players.length < 5 ? players.length : 5; %>
+
+<table class="wordle-table tab-content-item">
+  <thead>
+    <tr>
+      <th class="rank"></th>
+      <th class="nick">Nickname</th>
+      <th class="sp">Games</th>
+      <th class="kd">Streak</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% for (let i = 0; i < size; ++i) { %>
+    <tr>
+      <td class="rank"><%= i + 1 %></td>
+      <% if (players[i].name === user.name) { %>
+      <td class="nick text-info">
+        <% if (i == 0) { %>
+        <i class="fa-solid fa-crown fa-xl"></i>
+        <%= players[i].name %> <% } else { %> <%= players[i].name %> <% } %>
+      </td>
+      <% } else { %>
+      <td class="nick">
+        <% if (i == 0) { %>
+        <i class="fa-solid fa-crown fa-xl"></i>
+        <%= players[i].name %> <% } else { %> <%= players[i].name %> <% } %>
+      </td>
+      <% } %>
+      <td class="sp"><%= players[i].wordle.games %></td>
+      <td class="kd"><%= players[i].wordle.bestStreak %></td>
+    </tr>
+    <% } %> <% if (index > 5) { %>
+    <tr>
+      <td class="rank"><%= index %></td>
+      <td class="nick text-info"><%= user.name %></td>
+      <td class="sp"><%= user.wordle.games %></td>
+      <td class="kd"><%= user.wordle.bestStreak %></td>
+    </tr>
+    <% } %>
+  </tbody>
+</table>
+
+<% players.sort((a, b) => b.number.bestScore - a.number.bestScore ); %> <% index
+= players.findIndex((player) => player.name === user.name) + 1; %>
+
+<table class="number-table hidden tab-content-item">
+  <thead>
+    <tr>
+      <th class="rank"></th>
+      <th class="nick">Nickname</th>
+      <th class="sp">Games</th>
+      <th class="kd">Score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% for (let i = 0; i < size; ++i) { %>
+    <tr>
+      <td class="rank"><%= i + 1 %></td>
+      <% if (players[i].name === user.name) { %>
+      <td class="nick text-info">
+        <% if (i == 0) { %>
+        <i class="fa-solid fa-crown fa-xl"></i>
+        <%= players[i].name %> <% } else { %> <%= players[i].name %> <% } %>
+      </td>
+      <% } else { %>
+      <td class="nick">
+        <% if (i == 0) { %>
+        <i class="fa-solid fa-crown fa-xl"></i>
+        <%= players[i].name %> <% } else { %> <%= players[i].name %> <% } %>
+      </td>
+      <% } %>
+      <td class="sp"><%= players[i].number.games %></td>
+      <td class="kd"><%= players[i].number.bestScore %></td>
+    </tr>
+    <% } %> <% if (index > 5) { %>
+    <tr>
+      <td class="rank"><%= index %></td>
+      <td class="nick text-info"><%= user.name %></td>
+      <td class="sp"><%= user.number.games %></td>
+      <td class="kd"><%= user.number.bestScore %></td>
+    </tr>
+    <% } %>
+  </tbody>
+</table>
+
+<% players.sort((a, b) => b.snake.bestScore - a.snake.bestScore ); %> <% index =
+players.findIndex((player) => player.name === user.name) + 1; %>
+
+<table class="snake-table hidden tab-content-item">
+  <thead>
+    <tr>
+      <th class="rank"></th>
+      <th class="nick">Nickname</th>
+      <th class="sp">Games</th>
+      <th class="kd">Score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% for (let i = 0; i < size; ++i) { %>
+    <tr>
+      <td class="rank"><%= i + 1 %></td>
+      <% if (players[i].name === user.name) { %>
+      <td class="nick text-info">
+        <% if (i == 0) { %>
+        <i class="fa-solid fa-crown fa-xl"></i>
+        <%= players[i].name %> <% } else { %> <%= players[i].name %> <% } %>
+      </td>
+      <% } else { %>
+      <td class="nick">
+        <% if (i == 0) { %>
+        <i class="fa-solid fa-crown fa-xl"></i>
+        <%= players[i].name %> <% } else { %> <%= players[i].name %> <% } %>
+      </td>
+      <% } %>
+      <td class="sp"><%= players[i].snake.games %></td>
+      <td class="kd"><%= players[i].snake.bestScore %></td>
+    </tr>
+    <% } %> <% if (index > 5) { %>
+    <tr>
+      <td class="rank"><%= index %></td>
+      <td class="nick text-info"><%= user.name %></td>
+      <td class="sp"><%= user.snake.games %></td>
+      <td class="kd"><%= user.snake.bestScore %></td>
+    </tr>
+    <% } %>
+  </tbody>
+</table>
+
+<% players.sort((a, b) => b.flappy.bestScore - a.flappy.bestScore ); %> <% index
+= players.findIndex((player) => player.name === user.name) + 1; %>
+
+<table class="bird-table hidden tab-content-item">
+  <thead>
+    <tr>
+      <th class="rank"></th>
+      <th class="nick">Nickname</th>
+      <th class="sp">Games</th>
+      <th class="kd">Score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% for (let i = 0; i < size; ++i) { %>
+    <tr>
+      <td class="rank"><%= i + 1 %></td>
+      <% if (players[i].name === user.name) { %>
+      <td class="nick text-info">
+        <% if (i == 0) { %>
+        <i class="fa-solid fa-crown fa-xl"></i>
+        <%= players[i].name %> <% } else { %> <%= players[i].name %> <% } %>
+      </td>
+      <% } else { %>
+      <td class="nick">
+        <% if (i == 0) { %>
+        <i class="fa-solid fa-crown fa-xl"></i>
+        <%= players[i].name %> <% } else { %> <%= players[i].name %> <% } %>
+      </td>
+      <% } %>
+      <td class="sp"><%= players[i].flappy.games %></td>
+      <td class="kd"><%= players[i].flappy.bestScore %></td>
+    </tr>
+    <% } %> <% if (index > 5) { %>
+    <tr>
+      <td class="rank"><%= index %></td>
+      <td class="nick text-info"><%= user.name %></td>
+      <td class="sp"><%= user.flappy.games %></td>
+      <td class="kd"><%= user.flappy.bestScore %></td>
+    </tr>
+    <% } %>
+  </tbody>
+</table>
+
+<% players.sort((a, b) => b.doodle.bestScore - a.doodle.bestScore ); %> <% index
+= players.findIndex((player) => player.name === user.name) + 1; %>
+
+<table class="doodle-table hidden tab-content-item">
+  <thead>
+    <tr>
+      <th class="rank"></th>
+      <th class="nick">Nickname</th>
+      <th class="sp">Games</th>
+      <th class="kd">Score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% for (let i = 0; i < size; ++i) { %>
+    <tr>
+      <td class="rank"><%= i + 1 %></td>
+      <% if (players[i].name === user.name) { %>
+      <td class="nick text-info">
+        <% if (i == 0) { %>
+        <i class="fa-solid fa-crown fa-xl"></i>
+        <%= players[i].name %> <% } else { %> <%= players[i].name %> <% } %>
+      </td>
+      <% } else { %>
+      <td class="nick">
+        <% if (i == 0) { %>
+        <i class="fa-solid fa-crown fa-xl"></i>
+        <%= players[i].name %> <% } else { %> <%= players[i].name %> <% } %>
+      </td>
+      <% } %>
+      <td class="sp"><%= players[i].doodle.games %></td>
+      <td class="kd"><%= players[i].doodle.bestScore %></td>
+    </tr>
+    <% } %> <% if (index > 5) { %>
+    <tr>
+      <td class="rank"><%= index %></td>
+      <td class="nick text-info"><%= user.name %></td>
+      <td class="sp"><%= user.doodle.games %></td>
+      <td class="kd"><%= user.doodle.bestScore %></td>
+    </tr>
+    <% } %>
+  </tbody>
+</table>
+
+<% players.sort((a, b) => b.speed.wpm - a.speed.wpm ); %> <% index =
+players.findIndex((player) => player.name === user.name) + 1; %>
+
+<table class="speed-table hidden tab-content-item">
+  <thead>
+    <tr>
+      <th class="rank"></th>
+      <th class="nick">Nickname</th>
+      <th class="sp">Games</th>
+      <th class="kd">WPM</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% for (let i = 0; i < size; ++i) { %>
+    <tr>
+      <td class="rank"><%= i + 1 %></td>
+      <% if (players[i].name === user.name) { %>
+      <td class="nick text-info">
+        <% if (i == 0) { %>
+        <i class="fa-solid fa-crown fa-xl"></i>
+        <%= players[i].name %> <% } else { %> <%= players[i].name %> <% } %>
+      </td>
+      <% } else { %>
+      <td class="nick">
+        <% if (i == 0) { %>
+        <i class="fa-solid fa-crown fa-xl"></i>
+        <%= players[i].name %> <% } else { %> <%= players[i].name %> <% } %>
+      </td>
+      <% } %>
+      <td class="sp"><%= players[i].speed.games %></td>
+      <td class="kd"><%= players[i].speed.wpm %></td>
+    </tr>
+    <% } %> <% if (index > 5) { %>
+    <tr>
+      <td class="rank"><%= index %></td>
+      <td class="nick text-info"><%= user.name %></td>
+      <td class="sp"><%= user.speed.games %></td>
+      <td class="kd"><%= user.speed.wpm %></td>
+    </tr>
+    <% } %>
+  </tbody>
+</table>
+
+<% players.sort((a, b) => b.minesweeper.wins - a.minesweeper.wins ); %> <% index
+= players.findIndex((player) => player.name === user.name) + 1; %>
+
+<table class="minesweeper-table hidden tab-content-item">
+  <thead>
+    <tr>
+      <th class="rank"></th>
+      <th class="nick">Nickname</th>
+      <th class="sp">Games</th>
+      <th class="kd">Wins</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% for (let i = 0; i < size; ++i) { %>
+    <tr>
+      <td class="rank"><%= i + 1 %></td>
+      <% if (players[i].name === user.name) { %>
+      <td class="nick text-info">
+        <% if (i == 0) { %>
+        <i class="fa-solid fa-crown fa-xl"></i>
+        <%= players[i].name %> <% } else { %> <%= players[i].name %> <% } %>
+      </td>
+      <% } else { %>
+      <td class="nick">
+        <% if (i == 0) { %>
+        <i class="fa-solid fa-crown fa-xl"></i>
+        <%= players[i].name %> <% } else { %> <%= players[i].name %> <% } %>
+      </td>
+      <% } %>
+      <td class="sp"><%= players[i].minesweeper.games %></td>
+      <td class="kd"><%= players[i].minesweeper.wins %></td>
+    </tr>
+    <% } %> <% if (index > 5) { %>
+    <tr>
+      <td class="rank"><%= index %></td>
+      <td class="nick text-info"><%= user.name %></td>
+      <td class="sp"><%= user.minesweeper.games %></td>
+      <td class="kd"><%= user.minesweeper.wins %></td>
+    </tr>
+    <% } %>
+  </tbody>
+</table>
+
+<% players = players.filter((player) => player.tenzies.bestRolls);%>
+<% players.sort((a, b) => a.tenzies.bestRolls - b.tenzies.bestRolls ); %>
+ <% index = players.findIndex((player) => player.name === user.name) + 1; %>
+<% size = players.length > 5 ? 5 : players.length;%>
+
+<table class="tenzies-table hidden tab-content-item">
+  <thead>
+    <tr>
+      <th class="rank"></th>
+      <th class="nick">Nickname</th>
+      <th class="kd">Rolls</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% for (let i = 0; i < size; ++i) { %>
+      
+    <tr>
+      <td class="rank"><%= i + 1 %></td>
+      <% if (players[i].name === user.name) { %>
+      <td class="nick text-info">
+        <% if (i == 0) { %>
+        <i class="fa-solid fa-crown fa-xl"></i>
+        <%= players[i].name %> <% } else { %> <%= players[i].name %> <% } %>
+      </td>
+      <% } else { %>
+      <td class="nick">
+        <% if (i == 0) { %>
+        <i class="fa-solid fa-crown fa-xl"></i>
+        <%= players[i].name %> <% } else { %> <%= players[i].name %> <% } %>
+      </td>
+      <% } %>
+      <td class="kd"><%= players[i].tenzies.bestRolls %></td>
+    </tr>
+    <% } %> <% if (index > 5) { %>
+    <tr>
+      <td class="rank"><%= index %></td>
+      <td class="nick text-info"><%= user.name %></td>
+      <td class="kd"><%= user.tenzies.bestRolls %></td>
+    </tr>
+    <% } %>
+  </tbody>
+</table>

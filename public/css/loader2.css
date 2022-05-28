@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap");
+
+.loader {
+  font-family: "ZCOOL KuaiLe", cursive;
+  font-size: 2.5rem;
+  color: palevioletred;
+}
+
+.loader:after {
+  content: "\2026";
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+  animation: dots steps(4, end) 2s infinite;
+  width: 0px;
+}
+
+@keyframes dots {
+  to {
+    width: 1.25em;
+  }
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Snake</title>
+    <link rel="stylesheet" href="/public/css/snake.css" />
+    <link rel="stylesheet" href="/public/css/modal.css" />
+  </head>
+
+  <body>
+    <div class="modal hidden">
+      <div class="modal-body">
+        <h1>Game over!</h1>
+        <h2>Your score: <span class="score"></span></h2>
+        <div>
+          <a href="/dashboard" class="btn btn-success">Back to dashboard</a>
+          <a href="#" class="btn btn-success play-again">Play again</a>
+        </div>
+      </div>
+    </div>
+    
+    <canvas id="game" width="608" height="608"></canvas>
+    <div class="controls hidden">
+      <div>
+        <img src="/public/img/up.png" class="up" alt="" />
+      </div>
+      <div>
+        <img src="/public/img/left.png" class="left" alt="" />
+
+        <img src="/public/img/right.png" class="right" alt="" />
+      </div>
+      <div><img src="/public/img/down.png" class="down" alt="" /></div>
+    </div>
+
+    <script src="/public/js/snake.js"></script>
+    <script src="/public/js/timespend.js"></script>
+  </body>
+</html>

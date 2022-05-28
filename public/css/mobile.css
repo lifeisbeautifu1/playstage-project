@@ -1,0 +1,276 @@
+/* Font Family import: */
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+/* Variable declaration: */
+:root {
+  /* Primary Colors */
+  --Pale-blue: hsl(225, 100%, 94%);
+  --Bright-blue: hsl(245, 75%, 52%);
+  /* Neutral Colors */
+  --Very-pale-blue: hsl(225, 100%, 98%);
+  --Desaturated-blue: hsl(224, 23%, 55%);
+  --Dark-blue: hsl(223, 47%, 23%);
+  /* Font Family */
+  --red-hat: 'Red Hat Display', sans-serif;
+  /* Font Size: paragraph */
+  --p: 16px;
+  /* Weights */
+  --m: 500;
+  --b: 700;
+  --sb: 900;
+}
+
+.games-section {
+  width: 100%;
+  background: #fff;
+  font-family: var(--red-hat);
+}
+.card-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.img {
+  width: 100%;
+  height: 220px;
+}
+.wordle {
+  background: url(/public/img/wordle.jpeg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.tenzies {
+  background: url(/public/img/tenzies.webp);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+.number {
+  background: url(../img/2048.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.snake {
+  background: url(../img/snake.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.flappy {
+  background: url(../img/flappy.jpeg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.sudoku {
+  background: url(../img/sudoku_thumbnail.webp);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.doodle {
+  background: url(../img/doodle.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.minesweeper {
+  background: url(../img/minesweeper.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.platformer {
+  background: url(../img/platformer.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+.speed {
+  background: url(../img/speed.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.pacman {
+  background: url(../img/pacman.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.frogger {
+  background: url(../img/frogger.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.quizzical {
+  background: url(../img/quizzical.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.space-invaders {
+  background: url(../img/space-invaders.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.agario {
+  background: url(../img/agario.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.memory {
+  background: url(../img/memory.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.battleship {
+  background: url(../img/battleship.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.Order-summay-card {
+  overflow: scroll;
+
+  max-width: 380px;
+  height: 560px;
+  border-radius: 20px;
+  margin-bottom: 2rem;
+  background: #fdfdfd;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(153, 165, 212, 0.3) 0px 30px 60px -30px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37) !important;
+}
+
+.order-summary-card--info {
+  width: 100%;
+  padding: 40px 20px 0 20px;
+  text-align: center;
+}
+
+.order-summary-card--info .order-summary-card--info__title {
+  color: var(--Dark-blue);
+  font-size: 24px;
+  font-weight: var(--sb);
+  margin-bottom: 15px;
+}
+
+.order-summary-card--info .order-summary-card--info__text {
+  min-width: 270px;
+  font-weight: var(--m);
+  margin: 0px auto;
+  font-size: 16px;
+  color: var(--Desaturated-blue);
+}
+
+.order-summary-card--info-plan {
+  background: var(--Very-pale-blue);
+  border-radius: 15px;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  place-items: center;
+  margin: 25px 0;
+}
+
+.order-summary-card--info-plan .icon-music {
+  background-image: url(../images/icon-music.svg);
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-repeat: no-repeat;
+  object-fit: contain;
+}
+.order-summary-card--info-plan .order-summary-card--info-plan__change {
+  color: var(--Bright-blue);
+  font-size: 13px;
+  font-weight: var(--sb);
+  margin-left: 45px;
+}
+
+.order-summary-card--info-plan .plan-info {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-left: 15px;
+}
+
+.plan-info .plan-info__name {
+  color: var(--Dark-blue);
+  font-weight: var(--b);
+  font-size: var(--p);
+}
+
+.plan-info .plan-info__price {
+  color: var(--Desaturated-blue);
+  font-size: 14px;
+  font-weight: var(--b);
+}
+
+.order-summary-card--buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.order-summary-card--buttons .Order-summay-card--info-primary-buttons {
+  background: var(--Bright-blue);
+  color: var(--Very-pale-blue);
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  font-family: var(--red-hat);
+  font-size: 16px;
+  font-weight: var(--b);
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+    rgba(19, 23, 241, 0.23) 0px 6px 6px;
+  transition: transform 0.3s ease, opacity 0.1s;
+}
+
+.order-summary-card--buttons .Order-summay-card--info-primary-buttons:hover {
+  transform: scale(0.98);
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.order-summary-card--buttons .Order-summay-card--info-secundary-buttons {
+  color: var(--Desaturated-blue);
+  font-weight: var(--sb);
+  font-size: 14px;
+}
+
+.order-summary-card--buttons .Order-summay-card--info-secundary-buttons:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 990px) {
+  .card-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

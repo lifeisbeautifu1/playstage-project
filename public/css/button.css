@@ -1,0 +1,42 @@
+.my-btn {
+  display: inline-block;
+  cursor: pointer;
+  color: #333;
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  border: none;
+  background: #fff;
+  font-size: 18px;
+  transition: transform 0.3s ease;
+  font-family: 'Exo 2', sans-serif !important;
+}
+
+.my-btn:active {
+  transform: scale(0.98);
+}
+
+.my-btn:hover {
+  transform: scale(0.98);
+}
+
+.chatbox-open {
+  border: none;
+  outline: none;
+  width: 52px;
+  height: 52px;
+  background: rgba(0, 212, 255, 1);
+  
+  color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  position: fixed;
+  z-index: 100;
+  box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.15);
+  bottom: 20px;
+  right: 20px;
+}
+
+.chatbox-open .fas {
+  color: #fff;
+}

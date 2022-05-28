@@ -1,0 +1,231 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #000;
+}
+
+.grid {
+  width: 720px;
+  height: 720px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.grid div {
+  width: 48px;
+  height: 48px;
+}
+
+.invader {
+  background-image: url('/public/img/invader.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.score {
+  position: absolute;
+  top: 50px;
+  font-size: 3rem;
+  color: #fff;
+  left: 50px;
+}
+
+@media (max-width: 768px) {
+  .score {
+    font-size: 2rem;
+  }
+}
+
+.first {
+  background-image: url('/public/img/1.png');
+}
+
+.second {
+  background-image: url('/public/img/2.png');
+}
+.third {
+  background-image: url('/public/img/3.png');
+}
+
+.shooter {
+  background-image: url('/public/img/shooter.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.laser {
+  /* background-image: url('img/missle.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain; */
+  background-color: #fff;
+  transform: scale(0.3);
+}
+
+.boom {
+  background-image: url('/public/img/boom.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+:root {
+  --modal-duration: 1s;
+  --modal-color: #42c5ca;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  display: flex;
+  height: 100vh;
+  position: relative;
+  width: 100vw;
+  overflow: hidden;
+  /* background-image: url(./img/background.png); */
+  /* background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; */
+  align-items: center;
+  justify-content: center;
+}
+/* 
+body::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 0;
+} */
+
+.video-container {
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* .video-container .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #53b7e6;
+  background: rgb(168, 134, 168);
+  mix-blend-mode: overlay;
+} */
+
+.video-container video {
+  /* display: none; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+}
+
+.button {
+  background: var(--modal-color);
+  padding: 0.75em 1.25em;
+  font-size: 1rem;
+  color: #fff;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.button:hover {
+  opacity: 0.9;
+}
+
+.modal {
+  display: none;
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  margin: 10% auto;
+  width: 30%;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+  animation-name: modalopen;
+  animation-duration: var(--modal-duration);
+}
+
+.modal-header h2,
+.modal-footer h3 {
+  margin: 0;
+}
+
+.modal-header {
+  background: var(--modal-color);
+  padding: 15px;
+  color: #fff;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  text-align: center;
+}
+
+.modal-body {
+  font-size: 20px;
+  padding: 10px 20px;
+  background: #fff;
+  text-align: center;
+}
+
+.modal-footer {
+  background: var(--modal-color);
+  padding: 10px;
+  color: #fff;
+  text-align: center;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.close {
+  color: #ccc;
+  float: right;
+  font-size: 30px;
+  color: #fff;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

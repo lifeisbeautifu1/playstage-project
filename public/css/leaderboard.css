@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.leaderboard-toggler {
+  cursor: pointer;
+}
+
+.leaderboard {
+  font-family: 'Exo 2', sans-serif !important;
+  max-width: 23rem;
+  margin: 5rem auto;
+  border-radius: 1rem;
+  box-shadow: 2px 2px 16px 1px #aaa;
+  font-family: sans-serif;
+}
+
+.leaderboard a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.leaderboard-toggler-two,
+.leaderboard-toggler-three {
+  cursor: pointer;
+}
+
+.leaderboard header {
+  /* background-color: aquamarine;
+  background-color: #ff7500; */
+  background-color: gold;
+  color: white;
+  text-transform: uppercase;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  height: 14rem;
+  position: relative;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.leaderboard h1 {
+  font-size: 3rem;
+  line-height: 3rem;
+  position: absolute;
+  margin-left: 2rem;
+  top: 4rem;
+}
+
+.leaderboard img {
+  height: 16rem;
+  position: absolute;
+  bottom: 2rem;
+  right: -4.5rem;
+}
+
+.leaderboard nav {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  font-size: 0.9rem;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    transparent 10%,
+    rgba(22, 22, 22, 0.5)
+  );
+}
+
+.leaderboard nav a {
+  padding-top: 1rem;
+  padding-bottom: 0.75rem;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.leaderboard nav a.active {
+  border-bottom: 4px solid #f0a900;
+}
+
+.leaderboard nav a:first-child {
+  margin-left: 3rem;
+}
+
+.leaderboard nav a + a {
+  margin-left: 1rem;
+}
+
+.leaderboard table {
+  background-color: #16181e;
+  color: #999;
+  width: 100%;
+  border-collapse: collapse;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  overflow: hidden;
+}
+
+.leaderboard thead {
+  font-size: 0.7rem;
+  color: #555;
+  text-transform: uppercase;
+}
+
+.leaderboard tbody .nick {
+  color: white;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.leaderboard tbody tr:nth-child(2n) {
+  background-color: #1f232c;
+}
+
+.nick {
+  text-align: left;
+}
+
+.rank,
+.sp,
+.kd {
+  text-align: right;
+}
+
+.rank {
+  width: 4ch;
+  padding-left: 1rem;
+}
+
+.sp,
+.kd {
+  width: 8ch;
+}
+
+.leaderboard th {
+  padding: 1.5rem 1rem 0.5rem;
+}
+
+.leaderboard td {
+  padding: 1rem 1rem;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .leaderboard img {
+    height: 12rem;
+    right: -1.5rem;
+    bottom: 3rem;
+  }
+}
+
+/* #1f232c */

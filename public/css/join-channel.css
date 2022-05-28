@@ -1,0 +1,407 @@
+.modal-rooms-body brd {
+  border: 1px solid #e2eded;
+  border-color: #eaf1f1 #e4eded #dbe7e7 #e4eded;
+}
+
+.modal-rooms-body * {
+  box-sizing: content-box !important;
+}
+
+.modal-rooms-body {
+  background: #f3f3f3;
+  border-radius: 5px;
+  padding: 20px;
+  width: 340px;
+  height: 420px;
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.joinBtn {
+  margin-top: 1rem;
+  width: 90%;
+}
+
+.modal-rooms-body #app-cover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 300px;
+  height: 42px;
+  margin: 20px auto 0 auto;
+  z-index: 1;
+}
+.modal-rooms-body #select-button {
+  position: relative;
+  height: 16px;
+  padding: 12px 14px;
+  background-color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.modal-rooms-body #options-view-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.modal-rooms-body #selected-value {
+  font-size: 16px;
+  line-height: 1;
+  margin-right: 26px;
+}
+
+.modal-rooms-body .my-option i {
+  width: 16px;
+  height: 16px;
+}
+
+.modal-rooms-body .my-option,
+.modal-rooms-body .label {
+  color: #2d3667;
+  font-size: 16px;
+}
+
+.modal-rooms-body #chevrons {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 12px;
+  padding: 9px 14px;
+}
+
+.modal-rooms-body #chevrons i {
+  display: block;
+  height: 50%;
+  color: #d1dede;
+  font-size: 12px;
+  text-align: right;
+}
+
+.modal-rooms-body #options-view-button:checked + #select-button #chevrons i {
+  color: #2d3667;
+}
+
+.modal-rooms-body .my-options {
+  position: absolute;
+  left: 0;
+  width: 250px;
+}
+
+.modal-rooms-body #options {
+  position: absolute;
+  top: 42px;
+  right: 0;
+  left: 0;
+  width: 298px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.modal-rooms-body #options-view-button:checked ~ #options {
+  border: 1px solid #e2eded;
+  border-color: #eaf1f1 #e4eded #dbe7e7 #e4eded;
+}
+
+.modal-rooms-body .my-option {
+  position: relative;
+  line-height: 1;
+  transition: 0.3s ease all;
+  z-index: 2;
+}
+
+.modal-rooms-body .my-option i {
+  position: absolute;
+  left: 14px;
+  padding: 0;
+  display: none;
+}
+
+.modal-rooms-body #options-view-button:checked ~ #options .my-option i {
+  display: block;
+  padding: 12px 0;
+}
+
+.modal-rooms-body .label {
+  display: none;
+  padding: 0;
+  margin-left: 27px;
+}
+
+.modal-rooms-body #options-view-button:checked ~ #options .label {
+  display: block;
+  padding: 12px 14px;
+}
+
+.modal-rooms-body .s-c {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 50%;
+}
+
+.s-c.top {
+  top: 0;
+}
+
+.s-c.bottom {
+  bottom: 0;
+}
+
+input[type='radio'] {
+  position: absolute;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.s-c:hover ~ i {
+  color: #fff;
+  opacity: 0;
+}
+
+.s-c:hover {
+  height: 100%;
+  z-index: 1;
+}
+
+.s-c.bottom:hover + i {
+  bottom: -25px;
+  animation: moveup 0.3s ease 0.1s forwards;
+}
+
+.s-c.top:hover ~ i {
+  top: -25px;
+  animation: movedown 0.3s ease 0.1s forwards;
+}
+
+@keyframes moveup {
+  0% {
+    bottom: -25px;
+    opacity: 0;
+  }
+  100% {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes movedown {
+  0% {
+    top: -25px;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+.label {
+  transition: 0.3s ease all;
+}
+
+.opt-val {
+  position: absolute;
+  left: 14px;
+  width: 217px;
+  height: 21px;
+  opacity: 0;
+  background-color: #fff;
+  transform: scale(0);
+}
+
+.my-option input[type='radio']:checked ~ .opt-val {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.my-option input[type='radio']:checked ~ i {
+  top: 0;
+  bottom: auto;
+  opacity: 1;
+  animation: unset;
+}
+
+.my-option input[type='radio']:checked ~ i,
+.my-option input[type='radio']:checked ~ .label {
+  color: #fff;
+}
+
+.my-option input[type='radio']:checked ~ .label:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+#options-view-button:not(:checked)
+  ~ #options
+  .my-option
+  input[type='radio']:checked
+  ~ .opt-val {
+  top: -30px;
+}
+
+.my-option:nth-child(1) input[type='radio']:checked ~ .label:before {
+  background-color: #000;
+  border-radius: 4px 4px 0 0;
+}
+
+.my-option:nth-child(1) input[type='radio']:checked ~ .opt-val {
+  top: -31px;
+}
+
+.my-option:nth-child(2) input[type='radio']:checked ~ .label:before {
+  background-color: #ea4c89;
+}
+
+.my-option:nth-child(2) input[type='radio']:checked ~ .opt-val {
+  top: -71px;
+}
+
+.my-option:nth-child(3) input[type='radio']:checked ~ .label:before {
+  background-color: #0057ff;
+}
+
+.my-option:nth-child(3) input[type='radio']:checked ~ .opt-val {
+  top: -111px;
+}
+
+.my-option:nth-child(4) input[type='radio']:checked ~ .label:before {
+  background-color: #32c766;
+}
+
+.my-option:nth-child(4) input[type='radio']:checked ~ .opt-val {
+  top: -151px;
+}
+
+.my-option:nth-child(5) input[type='radio']:checked ~ .label:before {
+  background-color: #f48024;
+}
+
+.my-option:nth-child(5) input[type='radio']:checked ~ .opt-val {
+  top: -191px;
+}
+
+.my-option:nth-child(6) input[type='radio']:checked ~ .label:before {
+  background-color: #006400;
+  border-radius: 0 0 4px 4px;
+}
+
+.my-option:nth-child(6) input[type='radio']:checked ~ .opt-val {
+  top: -231px;
+}
+.my-option:nth-child(7) input[type='radio']:checked ~ .label:before {
+  background-color: #1a30c3;
+  border-radius: 0 0 4px 4px;
+}
+
+.my-option:nth-child(7) input[type='radio']:checked ~ .opt-val {
+  top: -271px;
+}
+
+.my-option .fa-codepen {
+  color: #000;
+}
+
+.my-option .fa-bomb {
+  color: grey;
+}
+
+.my-option .fa-hackerrank {
+  color: orange;
+}
+
+.my-option .fa-worm,
+.my-option .fa-dove {
+  color: #32c766;
+}
+
+.my-option .fa-free-code-camp {
+  color: #f48024;
+}
+
+.my-option .fa-frog {
+  color: #006400;
+}
+
+#option-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 40px;
+  transition: 0.3s ease all;
+  z-index: 1;
+  display: none;
+}
+
+#options-view-button:checked ~ #options #option-bg {
+  display: block;
+}
+
+.my-option:hover .label {
+  color: #fff;
+}
+
+.my-option:nth-child(1):hover ~ #option-bg {
+  top: 0;
+  background-color: #000;
+  border-radius: 4px 4px 0 0;
+}
+
+.my-option:nth-child(2):hover ~ #option-bg {
+  top: 40px;
+  background-color: #ea4c89;
+}
+
+.my-option:nth-child(3):hover ~ #option-bg {
+  top: 80px;
+  background-color: #0057ff;
+}
+
+.my-option:nth-child(4):hover ~ #option-bg {
+  top: 120px;
+  background-color: #32c766;
+}
+
+.my-option:nth-child(5):hover ~ #option-bg {
+  top: 160px;
+  background-color: #f48024;
+}
+
+.my-option:nth-child(6):hover ~ #option-bg {
+  top: 200px;
+  background-color: #006400;
+  border-radius: 0 0 4px 4px;
+}
+
+.my-option:nth-child(7):hover ~ #option-bg {
+  top: 240px;
+  background-color: #143dab;
+  border-radius: 0 0 4px 4px;
+}

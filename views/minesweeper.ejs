@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minesweeper</title>
+    <link rel="stylesheet" href="/public/css/minesweeper.css"></link>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    
+    <div class="container">
+      <div class="grid"></div>
+      <div>Flags left: <span id='flags-left'></span></div>
+      <div id="result"></div>
+    </div>
+
+    <div id="my-modal" class="modal">
+
+      <div class="modal-content">
+
+          <div class="modal-header">
+
+              <h2>Game Over</h2>
+          
+          </div>
+
+          <div class="modal-body">
+
+                <p id="text"></p>
+
+              <a href="/dashboard" class="button">Go back</a>
+              <a href="" id="modal-btn" class="button">Play Again</a>
+              <!-- <button id="modal-btn" class="button">Play again</button> -->
+
+          </div>
+
+          <div class="modal-footer">
+
+              <h3>Minesweeper</h3>
+
+          </div>
+
+      </div>
+
+    </div>  
+    <script src="/public/js/minesweeper.js" charset="utf-8"></script>
+    <script src="/public/js/timespend.js"></script>
+
+  </body>
+
+</html>

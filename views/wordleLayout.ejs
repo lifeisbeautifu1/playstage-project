@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css"
+      integrity="sha512-T584yQ/tdRR5QwOpfvDfVQUidzfgc2339Lc8uBDtcp/wYu80d7jwBgAxbyMh0a9YM9F8N3tdErpFI8iaGx6x5g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../public/css/wordle.css" />
+    <link class="theme-style" rel="stylesheet" href="" />
+    <title>wordle</title>
+  </head>
+  <body>
+    <div class="settings-modal hidden">
+      <div class="settings-modal-content card">
+        <div class="theme">
+          <div>
+            <h4>Dark Theme</h4>
+            <a href="#"><i class="themeBtn fa-solid fa-toggle-off"></i></a>
+          </div>
+          <h3>Statistic</h3>
+          <%- body %>
+        </div>
+      </div>
+    </div>
+    <div class="game">
+      <div class="title">
+        <a href="#"><i class="settings fas fa-gear"></i></a>
+        <h1>Wordle</h1>
+      </div>
+      <div class="message"></div>
+      <div class="tiles"></div>
+      <div class="keys"></div>
+    </div>
+    <script src="../public/js/wordle.js"></script>
+    <script src="/public/js/timespend.js"></script>
+  </body>
+</html>

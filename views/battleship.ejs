@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Battleship</title>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="/public/css/battleship.css" />
+    <script src="/socket.io/socket.io.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <nav>
+      <div class="wrapper">
+        <h3>Battleship</h3>
+        <div id="turn-status"></div>
+      </div>
+    </nav>
+    <!-- Start Screen -->
+    <div id="startScreen" style="display: none">
+      <h1>Welcome</h1>
+      <div class="start-screen">
+        <button id="create-game" class="button">Create Game</button>
+        <hr />
+
+        <input
+          type="text"
+          placeholder="Enter game code here..."
+          id="code-input"
+          class="input"
+        />
+        <button id="join-game" class="button">Join Game</button>
+        <hr />
+        <button id="find-game" class="button">Find Game</button>
+      </div>
+    </div>
+    <!-- Loader 2 -->
+    <div id="search" class="loader" style="display: none"></div>
+    <div id="waiting" style="display: none">
+      <h1>Your game code is <span id="waiting-title"></span></h1>
+    </div>
+    <div id="disconnected">
+      <div class="text-center">
+        <div class="alert alert-danger">
+          <p>Not connected to server.</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="game" style="display: none">
+      <div class="game-wrapper">
+        <div class="you">
+          <h3 class="text-center">You</h3>
+          <div class="letters">
+            <div>A</div>
+            <div>B</div>
+            <div>C</div>
+            <div>D</div>
+            <div>E</div>
+            <div>F</div>
+            <div>G</div>
+            <div>H</div>
+            <div>I</div>
+            <div>K</div>
+          </div>
+          <div class="wrapper">
+            <div class="numbers">
+              <div>1</div>
+              <div>2</div>
+              <div>3</div>
+              <div>4</div>
+              <div>5</div>
+              <div>6</div>
+              <div>7</div>
+              <div>8</div>
+              <div>9</div>
+              <div>10</div>
+            </div>
+            <canvas id="canvas-grid1" width="361" height="361"
+              >Browser does not support canvas.</canvas
+            >
+          </div>
+        </div>
+        <div class="opponent">
+          <h3 class="text-center">Opponent</h3>
+          <div class="letters">
+            <div>A</div>
+            <div>B</div>
+            <div>C</div>
+            <div>D</div>
+            <div>E</div>
+            <div>F</div>
+            <div>G</div>
+            <div>H</div>
+            <div>I</div>
+            <div>K</div>
+          </div>
+          <div class="wrapper">
+            <div class="numbers">
+              <div>1</div>
+              <div>2</div>
+              <div>3</div>
+              <div>4</div>
+              <div>5</div>
+              <div>6</div>
+              <div>7</div>
+              <div>8</div>
+              <div>9</div>
+              <div>10</div>
+            </div>
+            <canvas id="canvas-grid2" width="361" height="361"
+              >Browser does not support canvas.</canvas
+            >
+          </div>
+        </div>
+      </div>
+      <ul class="list-group">
+        <li class="list-group-item" id="messages-list">
+          <ul id="messages"></ul>
+        </li>
+        <li class="list-group-item">
+          <form id="message-form" action="">
+            <div class="input-group">
+              <input id="message" class="form-control" autocomplete="off" />
+              <div class="input-group-btn">
+                <button class="btn btn-primary">Send Message</button>
+              </div>
+            </div>
+          </form>
+        </li>
+      </ul>
+    </div>
+
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js"
+    ></script>
+    <!-- <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.5/socket.io.min.js"
+    ></script> -->
+    <script type="text/javascript" src="/public/js/battleship/battleship-game.js"></script>
+    <script type="text/javascript" src="/public/js/battleship/battleship-client.js"></script>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+/* Font Family import: */
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+/* Variable declaration: */
+:root {
+  /* Primary Colors */
+  --Pale-blue: hsl(225, 100%, 94%);
+  --Bright-blue: hsl(245, 75%, 52%);
+  /* Neutral Colors */
+  --Very-pale-blue: hsl(225, 100%, 98%);
+  --Desaturated-blue: hsl(224, 23%, 55%);
+  --Dark-blue: hsl(223, 47%, 23%);
+  /* Font Family */
+  --red-hat: 'Red Hat Display', sans-serif;
+  /* Font Size: paragraph */
+  --p: 16px;
+  /* Weights */
+  --m: 500;
+  --b: 700;
+  --sb: 900;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+.games-section {
+  background: #fff;
+  /* background: var(--Pale-blue);
+  background-image: url(/public/img/pattern-background-desktop.svg); */
+}
+
+.Order-summay-card {
+  width: 400px;
+  height: 560px;
+}
+
+.order-summary-card--info {
+  padding: 35px 45px 0 45px;
+}
+
+.order-summary-card--info .order-summary-card--info__text {
+  width: 290px;
+  font-weight: var(--b);
+}
+
+.order-summary-card--buttons {
+  gap: 25px;
+}
+
+.order-summary-card--info .order-summary-card--info__text,
+.order-summary-card--buttons .Order-summay-card--info-primary-buttons,
+.order-summary-card--buttons .Order-summay-card--info-secundary-buttons {
+  font-size: 14px;
+}
