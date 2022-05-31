@@ -7,6 +7,11 @@ body {
   overflow-x: hidden !important;
 }
 
+.nav-logo {
+  width: 200px;
+  object-fit: cover;
+}
+
 .game-genres-section {
   text-align: center;
 }
@@ -87,11 +92,16 @@ background: linear-gradient(180deg, rgba(178,189,209,1) 0%, rgba(255,255,255,1) 
   color: #fff;
   background: rgb(2, 0, 36) !important;
   overflow: hidden;
-  background: linear-gradient(
+  /* background: linear-gradient(
     90deg,
     rgba(2, 0, 36, 1) 0%,
     rgba(161, 13, 175, 1) 35%,
     rgba(0, 212, 255, 1) 100%
+  ) !important; */
+  background: linear-gradient(
+    90deg,
+    rgba(0, 212, 255, 1) 0%,
+    rgba(161, 13, 175, 1) 100%
   ) !important;
   /* background-image: linear-gradient(
     to top right,
@@ -205,6 +215,7 @@ footer {
   backdrop-filter: blur(0px) !important;
   -webkit-backdrop-filter: blur(0px) !important;
   border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  
 }
 
 .navbar-toggler-icon.dark-color {
@@ -653,11 +664,18 @@ table {
   font-size: 1rem;
   color: #fff;
   transition: color 1s linear;
-  background: rgba(255, 255, 255, 0.15) !important;
+  background: rgba( 255, 255, 255, 0.3 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+  /* background: rgba(255, 255, 255, 0.15) !important;
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37) !important;
   backdrop-filter: blur(0px) !important;
   -webkit-backdrop-filter: blur(0px) !important;
   border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  background: #fff !important;
+  color: #333 !important; */
 }
 
 .my-navbar h4 {
