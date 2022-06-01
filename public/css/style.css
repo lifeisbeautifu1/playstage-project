@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap');
+
+.games-wrapper {
+  font-size: 16px;
+  color: #333;
+  font-family: 'Nova Mono', sans-serif;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#leaderboard {
+  margin-top: 10rem;
+}
+.card {
+  background-color: #fff;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  border: none;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0px 1rem 1.5rem rgba(0, 0, 0, 0.5);
+}
+.card .banner {
+  height: 14rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.card .menu {
+  width: 100%;
+  height: 5.5rem;
+  padding: 1rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.card h2.name {
+  text-align: center;
+  padding: 0 2rem 0.5rem;
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #333;
+  margin: 0;
+  margin-top: 1rem;
+}
+.card .title {
+  color: #a0a0a0;
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 0 2rem 1.2rem;
+}
+.card .actions {
+  padding: 0 2rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  order: 99;
+}
+.card .actions .follow-info {
+  padding: 0 0 1rem;
+  display: flex;
+}
+.card .actions .follow-info h2 {
+  text-align: center;
+  width: 60%;
+  margin: 0;
+  box-sizing: border-box;
+}
+.card .actions .follow-info h2 a {
+  text-decoration: none;
+  padding: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.8rem;
+  transition: background-color 100ms ease-in-out;
+}
+.card .actions .follow-info h2 a span {
+  font-size: 1.25rem;
+  color: #3829e0;
+  font-weight: bold;
+  transform-origin: bottom;
+  transform: scaleY(1.1);
+  transition: color 100ms ease-in-out;
+}
+.card .actions .follow-info h2 a small {
+  color: #afafaf;
+  font-size: 0.85rem;
+  font-weight: normal;
+}
+.card .actions .follow-info h2 a:hover {
+  background-color: #f2f2f2;
+}
+.card .actions .follow-info h2 a:hover span {
+  color: #3829e0;
+}
+
+.card .actions .follow-btn a {
+  color: #fff;
+  font: inherit;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: #3829e0;
+  letter-spacing: 1px;
+  font-size: 1.5rem;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  border: none;
+  padding: 0.5rem;
+  outline: none;
+  margin: auto;
+  box-sizing: border-box;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background-color 100ms ease-in-out,
+    transform 200ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+.card .actions .follow-btn a:hover {
+  transform: scale(1.1);
+}
+.card .actions .follow-btn a:active {
+  transform: scale(1);
+}
+.card .desc {
+  text-align: center;
+  padding: 0 2rem 2.5rem;
+  order: 100;
+}
