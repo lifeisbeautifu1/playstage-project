@@ -16,5 +16,5 @@ $ npm run dev
 
 You need to create .env file and specify your MONGO_URI link first
 ### Visit http://localhost:3000
-### [Live demo](https://webdeckplatform.herokuapp.com/)
+### [Live demo](https://playstage-project.herokuapp.com/)
 
