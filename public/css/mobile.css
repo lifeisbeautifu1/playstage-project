@@ -42,8 +42,9 @@
 .wordle {
   background: url(/public/img/wordle.jpeg);
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center;
   background-size: cover;
+  object-fit: cover;
 }
 
 .tenzies {
@@ -52,6 +53,8 @@
   background-position: center center;
   background-size: contain;
 }
+
+
 
 .number {
   background: url(../img/2048.png);
