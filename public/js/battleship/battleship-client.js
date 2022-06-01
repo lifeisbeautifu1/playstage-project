@@ -107,7 +107,15 @@ $(function () {
    */
   socket.on('leave', function () {
     $('#game').hide();
-    $('#startScreen').show();
+    // $('#startScreen').show();
+    $('#search').html('Searching for the opponent');
+    $('#search').show();
+    $('#turn-status')
+      .removeClass('alert-opponent-turn')
+      .removeClass('alert-your-turn')
+      .removeClass('alert-loser')
+      .removeClass('alert-winner')
+      .html('');
   });
 
   /**
