@@ -1003,7 +1003,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   }
 
   .showcase h1 {
-    font-size: 55px;
+    font-size: 4.5rem;
   }
 
   .showcase .btn {
@@ -1038,7 +1038,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   }
   .showcase-text {
     width: 70%;
-    font-size: 14px;
+    font-size: 1.25rem;
   }
 
   /* .showcase-info h1 {
