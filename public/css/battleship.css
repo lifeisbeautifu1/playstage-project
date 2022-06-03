@@ -3,7 +3,7 @@
 /* Disable bootstrap 1200px */
 @media (min-width: 1200px) {
   .container {
-    width: 970px;
+    width: 870px;
   }
 }
 
@@ -94,7 +94,7 @@ nav .wrapper {
 }
 
 .wrapper {
-  max-width: 60vw;
+  max-width: 870px;
   margin: auto;
 }
 
@@ -137,7 +137,7 @@ nav h3 {
 }
 
 .game-wrapper {
-  min-width: 900px;
+  min-width: 870px;
   display: flex;
   justify-content: space-between;
   align-items: center;
