@@ -126,6 +126,22 @@ nav h3 {
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
 }
 
+@media (max-width: 968px) {
+  .list-group {
+    min-width: 700px;
+  }
+
+  .wrapper {
+    max-width: 700px;
+  }
+
+  .game-wrapper {
+  justify-content: center !important;
+  gap: 10px;
+  
+}
+}
+
 .list-group .list-group-item:first-child {
   border-top-left-radius: 5px !important;
   border-top-right-radius: 5px !important;
@@ -137,7 +153,7 @@ nav h3 {
 }
 
 .game-wrapper {
-  min-width: 870px;
+  width: 870px;
   display: flex;
   justify-content: space-between;
   align-items: center;
