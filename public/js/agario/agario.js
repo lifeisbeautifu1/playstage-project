@@ -26,6 +26,11 @@ document.addEventListener('mousemove', (e) => {
   mouseY = e.clientY;
 });
 
+document.addEventListener('click', (e) => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+});
+
 let socket = io();
 
 let startDiv = document.getElementById('start');
