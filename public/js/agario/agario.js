@@ -26,9 +26,14 @@ document.addEventListener('mousemove', (e) => {
   mouseY = e.clientY;
 });
 
-document.addEventListener('click', (e) => {
+window.addEventListener('click', (e) => {
   mouseX = e.clientX;
   mouseY = e.clientY;
+});
+
+window.addEventListener('touchstart', (e) => {
+  mouseX = e.touches[0].clientX;
+  mouseY = e.touches[0].clientY;
 });
 
 let socket = io();
