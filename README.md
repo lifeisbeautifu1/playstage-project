@@ -1,4 +1,4 @@
-# Online Gaming Platform
+# Playstage - Online gaming platform
 
 This is an online gaming platform created using Node.js, Express.js, MongoDB and some other packages.
 
