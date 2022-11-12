@@ -3,7 +3,7 @@
 /* Disable bootstrap 1200px */
 @media (min-width: 1200px) {
   .container {
-    width: 970px;
+    width: 870px;
   }
 }
 
@@ -94,7 +94,7 @@ nav .wrapper {
 }
 
 .wrapper {
-  max-width: 60vw;
+  max-width: 870px;
   margin: auto;
 }
 
@@ -108,14 +108,13 @@ nav h3 {
   padding: 30px;
   position: absolute;
   width: 100vw;
-  height: 100vh;
-
+  height: 100vw;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   gap: 30px;
   align-items: center;
 }
@@ -124,6 +123,29 @@ nav h3 {
   min-width: 900px;
   border-radius: 5px !important;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 968px) {
+  .list-group {
+    min-width: 700px;
+  }
+
+  .wrapper {
+    max-width: 700px;
+  }
+
+  .game-wrapper {
+  justify-content: center !important;
+  gap: 10px;
+  
+}
+}
+
+@media (max-width: 768px) {
+  .game-wrapper {
+    flex-direction: column !important;
+    gap: 30px !important;
+  }
 }
 
 .list-group .list-group-item:first-child {
@@ -137,7 +159,7 @@ nav h3 {
 }
 
 .game-wrapper {
-  min-width: 900px;
+  width: 870px;
   display: flex;
   justify-content: space-between;
   align-items: center;

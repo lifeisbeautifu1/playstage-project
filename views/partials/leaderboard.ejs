@@ -1,6 +1,6 @@
 <% players.sort((a, b) => b.wordle.bestStreak - a.wordle.bestStreak );%> <% let
-index = players.findIndex((player) => player.name === user.name) + 1; %> <%
-let size = players.length < 5 ? players.length : 5; %>
+index = players.findIndex((player) => player.name === user.name) + 1; %> <% let
+size = players.length < 5 ? players.length : 5; %>
 
 <table class="wordle-table tab-content-item">
   <thead>
@@ -300,10 +300,10 @@ players.findIndex((player) => player.name === user.name) + 1; %>
   </tbody>
 </table>
 
-<% players = players.filter((player) => player.tenzies.bestRolls);%>
-<% players.sort((a, b) => a.tenzies.bestRolls - b.tenzies.bestRolls ); %>
- <% index = players.findIndex((player) => player.name === user.name) + 1; %>
-<% size = players.length > 5 ? 5 : players.length;%>
+<% players = players.filter((player) => player.tenzies.bestRolls);%> <%
+players.sort((a, b) => a.tenzies.bestRolls - b.tenzies.bestRolls ); %> <% index
+= players.findIndex((player) => player.name === user.name) + 1; %> <% size =
+players.length > 5 ? 5 : players.length;%>
 
 <table class="tenzies-table hidden tab-content-item">
   <thead>
@@ -315,7 +315,7 @@ players.findIndex((player) => player.name === user.name) + 1; %>
   </thead>
   <tbody>
     <% for (let i = 0; i < size; ++i) { %>
-      
+
     <tr>
       <td class="rank"><%= i + 1 %></td>
       <% if (players[i].name === user.name) { %>

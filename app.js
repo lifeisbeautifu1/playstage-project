@@ -49,6 +49,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // Express session
+// ! Warning
+// * Hello
+// ? What?
+// TODO: add more stuff...
+
 app.use(
   session({
     secret: 'secret', //the cake is a lie
@@ -288,12 +293,14 @@ io.on('connection', (socket) => {
     if (player) {
       let vel = new Vector(
         data.mX - player.canvas.w / 2,
+
         data.mY - player.canvas.h / 2
       );
 
       vel.setMag(2.2 * Math.pow(player.r, -0.439) * 40);
 
       player.acc(vel);
+
 
       blobs.forEach((blob, index) => {
         if (player.see(blob)) {
