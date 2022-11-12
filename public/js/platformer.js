@@ -355,7 +355,7 @@ scene('game', ({ level, score }) => {
   jumpingThingyPositions.push({ x: 0, y: 0 });
   jumpingThingyPositions.push({ x: 885, y: 272 });
 
-  player = add([
+  let player = add([
     sprite('tiles', { frame: 300, animSpeed: 0.1 }),
     body(),
     solid(),
