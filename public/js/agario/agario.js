@@ -26,6 +26,16 @@ document.addEventListener('mousemove', (e) => {
   mouseY = e.clientY;
 });
 
+window.addEventListener('click', (e) => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+});
+
+window.addEventListener('touchstart', (e) => {
+  mouseX = e.touches[0].clientX;
+  mouseY = e.touches[0].clientY;
+});
+
 let socket = io();
 
 let startDiv = document.getElementById('start');
@@ -44,7 +54,7 @@ button.addEventListener('click', async () => {
 
   startDiv.style.display = 'none';
 
-  setInterval(main, 30);
+  setInterval(main, 50);
 });
 
 socket.on('playerData', (data) => {
@@ -54,7 +64,7 @@ socket.on('playerData', (data) => {
 socket.on('Players', (data) => {
   otherPlayers = [];
   data.forEach((data) => {
-    if (data.id != player.id) {
+    if (data.id !== player.id) {
       let newPlayer = new Player(
         data.pos.x,
         data.pos.y,
@@ -102,7 +112,7 @@ function main() {
   ctx.stroke();
   ctx.closePath();
 
-  for (blob of blobs) {
+  blobs.forEach((blob) => {
     if (
       blob.inWindow(
         player.pos.x,
@@ -110,14 +120,11 @@ function main() {
         canvas.width * (player.r / player.originalR),
         canvas.height * (player.r / player.originalR)
       )
-    ) {
+    )
       blob.show(ctx);
-    }
-  }
+  });
 
-  for (oplayer of otherPlayers) {
-    oplayer.show(ctx);
-  }
+  otherPlayers.forEach((player) => player.show(ctx));
 
   player.show(ctx);
   ctx.textAlign = 'start';
