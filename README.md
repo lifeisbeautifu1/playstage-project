@@ -17,5 +17,3 @@ $ npm run dev
 You need to create .env file and specify your MONGO_URI link first
 
 ### Visit http://localhost:3000
-
-### [Live website](https://playstage.up.railway.app)
